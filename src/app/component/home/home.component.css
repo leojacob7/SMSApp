@@ -4,15 +4,20 @@
   justify-content: space-between;
   flex-direction: column;
   height: 98%;
+  background: rgb(236, 231, 231);
 }
 .message-bubbles {
+  padding: 3rem;
   overflow: scroll;
   margin-bottom: 1%;
   width: 80%;
   height: 90%;
   margin-right: 5%;
   border: 1px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow-y: scroll;
+  background-color: white;
+  border-radius: 4px solid;
 }
 .box {
   display: flex;
@@ -25,11 +30,15 @@
 }
 
 .sendMessageContainer {
-  margin-right: 30px;
+  margin: 30px;
   border: 1px solid;
+  border-radius: 4px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+
   /* margin-left: 30px; */
   border-radius: 4px;
-  padding: 0rem 0.5rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   /* /* align-items: flex-end; */
@@ -43,7 +52,9 @@
 .input {
   padding: 10px;
 }
-
+.messageHistory {
+  margin: 1%;
+}
 .clear {
   background-color: red;
   border: 1px solid;

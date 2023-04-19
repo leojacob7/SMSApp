@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { validateSignInForm } from 'src/app/guards/authdata-guard';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { serverError } from 'src/app/services/constants';
 
 @Component({
   selector: 'app-sign-up',
@@ -52,7 +53,8 @@ export class SignUpComponent {
         },
         (e) => {
           console.log('error', e.error);
-          return (this.errorMessage = e.error.failure);
+          return (this.errorMessage =
+            e.error.failure || e.error.errors?.[0] || serverError);
         }
       );
   }

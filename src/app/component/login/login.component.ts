@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { AuthServiceService } from './../../services/auth-service.service';
 import { Component, OnInit } from '@angular/core';
 import { validateSignInForm } from 'src/app/guards/authdata-guard';
+import { serverError } from 'src/app/services/constants';
 
 @Component({
   selector: 'app-login',
@@ -47,7 +48,7 @@ export class LoginComponent {
         },
         (e) => {
           console.log('error', e.error);
-          return (this.errorMessage = e.error.failure);
+          return (this.errorMessage = e.error.failure || serverError);
         }
       );
   }

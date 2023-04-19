@@ -1,10 +1,10 @@
 <div class="align-center">
-    <h2>User Login</h2>
+    <h2>User Registration</h2>
     <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
       <div>
         <!-- <div *ngIf="myForm.controls['user.email'].errors?.['required'] && myForm.controls['user.email'].touched">Email is required</div> -->
         <input
-          placeholder="Email Id"
+          placeholder="user name"
           type="text"
           name="email"
           [(ngModel)]="user.email"
@@ -20,7 +20,7 @@
           
         />
         <input
-          placeholder="Password"
+          placeholder="Re enter Password"
           type="password"
           name="confirm_password"
           [(ngModel)]="user.confirm_password"
@@ -33,5 +33,7 @@
         <button type="submit" [disabled]="myForm.invalid" class="login-btn">Login</button>
       </div>
     </form>
+    <h4>Have an account ?</h4>
+    <a routerLink="/login">Log in</a>
   </div>
   

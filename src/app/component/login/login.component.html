@@ -4,7 +4,7 @@
       <div>
         <!-- <div *ngIf="myForm.controls['user.email'].errors?.['required'] && myForm.controls['user.email'].touched">Email is required</div> -->
         <input
-          placeholder="Email Id"
+          placeholder="user name"
           type="text"
           name="email"
           [(ngModel)]="user.email"
@@ -26,5 +26,8 @@
         <button type="submit" [disabled]="myForm.invalid" class="login-btn">Login</button>
       </div>
     </form>
+    <h4>Dont have an account ?</h4>
+    <a routerLink="/register">Register</a>
+
   </div>
   

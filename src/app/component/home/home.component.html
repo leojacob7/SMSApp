@@ -1,7 +1,9 @@
 <div class="align-center">
+    <h1>MY SMS MESSENGER</h1>
     <div class="box">
         <!-- <app-message-box></app-message-box> -->
         <div class="message-bubbles" #messageBubbles>
+            <h4 class="messageHistory">Message history ({{messages.length}})</h4>
             <app-message-bubbles *ngFor="let message of messages "[message]="message" [phone_number]="phone_number"/>
         </div>
         
