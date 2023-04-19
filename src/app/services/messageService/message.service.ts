@@ -82,9 +82,9 @@ export class MessageService {
       (res: any) => {
         console.log('Res', res.data);
         if (res.data.errors) {
-          return alert('Something went wrong, however we have saved your sms');
+          alert('Something went wrong, however we have saved your sms');
         }
-        this.messages.push(res.data.message);
+        this.messages.push({ ...message, created_at: Date.now() });
         this.messageSubject.next(this.messages);
       },
       (error) => {
