@@ -64,9 +64,10 @@ export class MessageService {
   }
 
   sendMessage(message) {
+    const localauth = this.cookieService.get('auth');
     const headers = {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + this.auth,
+      Authorization: 'Bearer ' + localauth,
     };
 
     const config: AxiosRequestConfig = {
