@@ -1,0 +1,14 @@
+.messageBody {
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 0.1em;
+  /* width: auto;
+  max-width: 80%; */
+}
+
+.sender {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}

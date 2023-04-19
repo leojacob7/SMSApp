@@ -1,0 +1,15 @@
+.btn {
+  margin-right: 0%;
+  padding: 40%;
+  border-radius: 15%;
+  background: black;
+  color: white;
+}
+
+.btnOutline {
+  border: none;
+  background: none;
+  border-bottom: 1px solid;
+  color: black !important;
+  background-color: none !important;
+}

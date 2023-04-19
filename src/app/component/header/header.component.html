@@ -1,0 +1,8 @@
+<div>
+    <div class="header">
+        <h1>SMS sender</h1>
+        <div *ngIf="isLoggedIn === true">
+            <app-button *ngIf="isLoggedIn" app-button btnName="Logout" (btnClick)="onLogout()"></app-button>
+        </div>
+    </div>
+</div>

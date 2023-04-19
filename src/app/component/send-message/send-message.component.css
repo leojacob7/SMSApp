@@ -1,0 +1,20 @@
+.sendMessageContainer {
+  position: absolute;
+  bottom: 0;
+  margin: 5%;
+  margin-right: 30px;
+  /* margin-left: 30px; */
+  border-radius: 4px;
+  padding: 0rem 0.5rem;
+  display: flex;
+  /* /* align-items: flex-end; */
+  justify-content: start;
+  width: 90%;
+  gap: 10px;
+  /* border: 1px solid; */
+}
+
+input {
+  flex-grow: 1;
+  height: 2rem;
+}
