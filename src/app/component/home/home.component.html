@@ -9,8 +9,8 @@
         
         <div class="sendMessageContainer">
             <h5>New message</h5>
-            <input type="text" value='' [(ngModel)]="phone_number" class="input">
-            <textarea type="text" value='' rows="5" cols="40" [(ngModel)]="new_message" ></textarea>
+            <input type="text" value='' placeholder="Please enter the phone number" [(ngModel)]="phone_number" class="input">
+            <textarea type="text" placeholder="Message to send" value='' rows="5" cols="40" [(ngModel)]="new_message" ></textarea>
             <div class="footer">
                 <app-button btnName="Clear" className="btnOutline" (btnClick)="onSendMessage()" [ngStyle]="{padding: '20px', height: '20px', width: '20px',display: 'block', border: 'none'}"></app-button>
                 <app-button btnName="Submit" (btnClick)="onSendMessage()" [ngStyle]="{padding: '1rem', height: '1px',width: '10px', display: 'block'}" ></app-button>
