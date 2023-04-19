@@ -79,7 +79,11 @@ export class MessageService {
     return from(
       axios.post(url, { ...message, user_id: this.user }, config)
     ).subscribe(
-      (res) => {
+      (res: any) => {
+        console.log('Res', res.data);
+        if (res.data.errors) {
+          return alert('Something went wrong, however we have saved your sms');
+        }
         this.messages.push(res.data.message);
         this.messageSubject.next(this.messages);
       },
